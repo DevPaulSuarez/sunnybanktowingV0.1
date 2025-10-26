@@ -1,0 +1,24 @@
+---
+interface Servicio {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+const servicios: Servicio[] = [
+  { title: "24/7 Towing", description: "Emergency towing anytime, anywhere.", icon: "🚗" },
+  { title: "Roadside Help", description: "Flat tyres, battery issues, or lockouts solved fast.", icon: "🛠️" },
+  { title: "Accident Recovery", description: "Secure towing after collisions.", icon: "⚠️" },
+  { title: "Car Transport", description: "Safe vehicle transport between locations.", icon: "🚚" },
+];
+---
+
+<div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6">
+  {servicios.map((s) => (
+    <div class="bg-white rounded-xl shadow-md p-6 text-center border hover:shadow-lg transition">
+      <div class="text-4xl mb-3">{s.icon}</div>
+      <h3 class="font-bold text-lg text-blue-600 mb-1">{s.title}</h3>
+      <p class="text-gray-500 text-sm">{s.description}</p>
+    </div>
+  ))}
+</div>

@@ -1,5 +1,14 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
+import Slider from "../components/Slider.astro";
+import Detalles from "../components/Detalles.astro";
+import Servicios from "../components/Servicios.astro";
+import AreasCoverage from "../components/AreasCoverage.astro";
+import Contacto from "../components/Contacto.astro";
+import FAQ from "../components/FAQ.astro";
+import SliderFooter from "../components/SliderFooter.astro";
+import Footer from "../components/Footer.astro";
+import Copyright from "../components/Copyright.astro";
 ---
 <!--Rutas y vistas del sitio -->
 <html lang="en">
@@ -20,3 +29,49 @@
 	</footer>
 </html>
 
+<MainLayout title="Sunnybank Towing | Professional Towing Services">
+  <!-- Section 1: Slider Automático -->
+  <section id="slider">
+    <Slider />
+  </section>
+
+  <!-- Section 2: Detalles -->
+  <section id="detalles" class="py-12 bg-gray-50">
+    <Detalles />
+  </section>
+
+  <!-- Section 3: Servicios -->
+  <section id="servicios" class="py-12 bg-white">
+    <Servicios />
+  </section>
+
+  <!-- Section 4: Áreas que cubrimos -->
+  <section id="areas" class="py-12 bg-gray-100">
+    <AreasCoverage />
+  </section>
+
+  <!-- Section 5: Contáctenos ahora -->
+  <section id="contacto" class="py-12 bg-blue-50">
+    <Contacto />
+  </section>
+
+  <!-- Section 6: Preguntas frecuentes -->
+  <section id="faq" class="py-12 bg-white">
+    <FAQ />
+  </section>
+
+  <!-- Section 7: Slider Footer (aseguradoras) -->
+  <section id="slider-footer" class="py-12 bg-gray-50">
+    <SliderFooter />
+  </section>
+
+  <!-- Section 8: Footer principal -->
+  <footer id="footer" class="bg-gray-900 text-gray-300">
+    <Footer />
+  </footer>
+
+  <!-- Section 9: Copyright -->
+  <section id="copyright" class="bg-black text-gray-400 text-center py-4">
+    <Copyright />
+  </section>
+</MainLayout>
