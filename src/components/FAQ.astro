@@ -1,0 +1,22 @@
+---
+interface FAQ {
+  q: string;
+  a: string;
+}
+
+const faqs: FAQ[] = [
+  { q: "Do you offer 24/7 towing?", a: "Yes, our team is available at all hours." },
+  { q: "How long does it take to arrive?", a: "Usually within 30 minutes depending on location." },
+  { q: "What payments do you accept?", a: "We accept cash, card, and digital payments." },
+];
+---
+
+<div class="max-w-4xl mx-auto px-6">
+  <h2 class="text-3xl font-bold text-blue-600 mb-6 text-center">Frequently Asked Questions</h2>
+  {faqs.map((f) => (
+    <details class="border rounded-lg mb-4 bg-white shadow">
+      <summary class="cursor-pointer p-4 font-semibold text-gray-700">{f.q}</summary>
+      <p class="px-4 pb-4 text-gray-500">{f.a}</p>
+    </details>
+  ))}
+</div>

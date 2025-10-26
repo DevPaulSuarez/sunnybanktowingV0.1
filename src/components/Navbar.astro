@@ -1,0 +1,65 @@
+---
+import BurgerInfo from "../components/BurgerInfo.astro";
+interface MenuItem {
+  name: string;
+  href: string;
+  subItems?: { name: string; href: string }[];
+}
+
+const menus: MenuItem[] = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  {
+    name: "Our Services",
+    href: "#",
+    subItems: [
+      { name: "Remolque en toda la zona sur", href: "/services/towing" },
+      { name: "Venta e instalación de neumáticos", href: "/services/tyres" },
+      { name: "Mantenimiento automotriz", href: "/services/maintenance" },
+      { name: "Retiro gratuito de chatarra", href: "/services/scrap" },
+    ],
+  },
+  {
+    name: "Locations",
+    href: "#",
+    subItems: [
+      { name: "Woodridge", href: "/locations/woodridge" },
+      { name: "Inala", href: "/locations/inala" },
+    ],
+  },
+  { name: "FAQs", href: "/faqs" },
+  { name: "Blog", href: "/blog" },
+  { name: "Contact Us", href: "/contact" },
+];
+---
+
+<nav class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+    <!-- Logo mini -->
+    <a href="/" class="flex items-center gap-2">
+      <img src="/images/logo.png" alt="Logo" class="h-10" />
+      <span class="font-bold text-blue-700">Sunnybank Towing</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+      {menus.map((item) => (
+        <li class="relative group">
+          <a href={item.href} class="hover:text-blue-600">{item.name}</a>
+
+          {item.subItems && (
+            <ul class="absolute left-0 mt-2 bg-white shadow-md rounded-md opacity-0 group-hover:opacity-100 transition pointer-events-none group-hover:pointer-events-auto">
+              {item.subItems.map((sub) => (
+                <li>
+                  <a href={sub.href} class="block px-4 py-2 text-sm hover:bg-gray-100">{sub.name}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+<BurgerInfo />
+    
+  </div>
+</nav>
