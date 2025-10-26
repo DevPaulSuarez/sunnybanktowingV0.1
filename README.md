@@ -1,29 +1,66 @@
-# Astro Starter Kit: Minimal
+# 🚗 Sunnybank Towing V0.1
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Proyecto web desarrollado con **Astro** y **TailwindCSS**, diseñado para ofrecer un sitio moderno, rápido y optimizado para el servicio de remolque y asistencia vial.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 🧱 Tecnologías principales
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Astro](https://astro.build/) — Framework web estático y ultrarrápido.
+- [TailwindCSS](https://tailwindcss.com/) — Framework CSS utilitario para diseño moderno y responsivo.
+- [GitHub](https://github.com/) — Control de versiones y colaboración en equipo.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+---
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## ⚙️ Instalación y configuración
+npm install
+npm run dev
+http://localhost:4321
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+📦 sunnybanktowingV0.1
+ ┣ 📂 public/           → Archivos estáticos (imágenes, íconos, etc.)
+ ┣ 📂 src/
+ ┃ ┣ 📂 components/     → Componentes reutilizables
+ ┃ ┣ 📂 layouts/        → Plantillas base
+ ┃ ┣ 📂 pages/          → Rutas y vistas del sitio
+ ┃ ┗ 📂 styles/         → Archivos de estilo (Tailwind)
+ ┣ 📜 astro.config.mjs  → Configuración principal de Astro
+ ┣ 📜 tailwind.config.mjs
+ ┣ 📜 postcss.config.cjs
+ ┗ 📜 README.md
 
-Any static assets, like images, can be placed in the `public/` directory.
+
+🌿 Flujo de ramas (Git Workflow)
+main	Rama de producción (deploy)	Solo merges desde develop
+develop	Rama de integración	DevPess / JojoDev
+feat/...	Ramas individuales de desarrollo	Cada miembro crea la suya
+
+# Crear una nueva rama desde develop
+git checkout develop
+git pull origin develop
+git checkout -b feat/home-devpess
+
+# Subir cambios
+git add .
+git commit -m "Add homepage layout"
+git push origin feat/home-devpess
+
+# Crear un Pull Request hacia develop
+
+
+👥 Equipo de desarrollo
+Rol	Nombre	GitHub
+Project Manager / Dev Frontend	DevPess	
+Developer Frontend	JojoDev	
+
+
+
+
+### 1️⃣ Clonar el repositorio
+
+```bash
+git clone https://github.com/DevPaulSuarez/sunnybanktowingV0.1.git
+cd sunnybanktowingV0.1
 
 ## 🧞 Commands
 
