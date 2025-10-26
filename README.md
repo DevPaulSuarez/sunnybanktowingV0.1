@@ -38,14 +38,34 @@ feat/...	Ramas individuales de desarrollo	Cada miembro crea la suya
 # Crear una nueva rama desde develop
 git checkout develop
 git pull origin develop
-git checkout -b feat/home-devpess
+git checkout -b feat/devpess
 
 # Subir cambios
 git add .
 git commit -m "Add homepage layout"
-git push origin feat/home-devpess
+git push origin feat/devpess
 
 # Crear un Pull Request hacia develop
+
+## 🧩 Workflow del equipo
+
+- **main** → Rama de producción (solo merges desde `develop`)
+- **develop** → Rama de integración
+- **feat/** → Ramas de desarrollo individual (DevPess y JojoDev)
+
+### Flujo de trabajo
+1. Crear rama desde `develop`:  
+   `git checkout -b feat/feature-name`
+2. Trabajar y hacer commit
+3. Subir cambios:  
+   `git push origin feat/feature-name`
+4. Crear un Pull Request hacia `develop`
+5. Revisar y fusionar
+6. Solo cuando `develop` esté estable, se hace merge hacia `main`
+
+### Reglas
+- No se hacen commits directos a `main` ni a `develop`.
+- Todos los cambios deben pasar por un Pull Request revisado.
 
 
 👥 Equipo de desarrollo
