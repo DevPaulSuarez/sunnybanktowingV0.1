@@ -1,0 +1,29 @@
+---
+/* Este componente mostrará imágenes automáticas con transición */
+---
+
+<div class="relative w-full overflow-hidden">
+  <div class="flex animate-slide">
+    <img src="/images/slide1.jpg" alt="Remolque 1" class="w-full object-cover h-[80vh]" />
+    <img src="/images/slide2.jpg" alt="Remolque 2" class="w-full object-cover h-[80vh]" />
+    <img src="/images/slide3.jpg" alt="Remolque 3" class="w-full object-cover h-[80vh]" />
+  </div>
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+    <span class="w-3 h-3 bg-white rounded-full"></span>
+    <span class="w-3 h-3 bg-gray-400 rounded-full"></span>
+    <span class="w-3 h-3 bg-gray-400 rounded-full"></span>
+  </div>
+</div>
+
+<style>
+  @keyframes slide {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-100%); }
+    50%, 70% { transform: translateX(-200%); }
+    75%, 100% { transform: translateX(0); }
+  }
+  .animate-slide {
+    width: 300%;
+    animation: slide 15s infinite;
+  }
+</style>
