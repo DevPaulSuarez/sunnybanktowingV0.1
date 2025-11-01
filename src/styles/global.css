@@ -1,2 +1,110 @@
 @import "tailwindcss";
 /*Archivos de estilo (Tailwind)*/
+.btnContact {
+  background-color:#0D47A1; /* Color De Boton En Hover */
+  color: white;              /* texto blanco */
+  border: none;              /* sin borde */
+  padding: 10px 20px;        /* espaciado interno */
+  border-radius: 5px;        /* bordes redondeados */
+  cursor: pointer;           /* cambia el cursor al pasar el mouse */
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.btnContact:hover {
+  background-color: #1565C0; /* Azul más oscuro al pasar el mouse */
+}
+
+  .aboutSectionDetalles {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .conteinerImagen {
+    flex: 1;
+  }
+
+  .conteinerImagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .containerTexto {
+    flex: 1;
+  }
+
+  /* Responsive: en pantallas pequeñas, apila verticalmente */
+  @media (max-width: 768px) {
+    .aboutSectionDetalles {
+      flex-direction: column;
+    }
+  }
+
+    .serviciosDestacados {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .servicioItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+  }
+
+  .servicioItem:hover {
+    transform: translateY(-10px);
+  }
+
+  .servicioIcono {
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+  }
+
+  .servicioItem:hover .servicioIcono {
+    transform: scale(1.15) rotate(5deg);
+  }
+
+  .servicioIcono img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+  }
+
+  .servicioTitulo h4 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #1a1a1a;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .servicioItem:hover .servicioTitulo h4 {
+    color: #FFC107;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .serviciosDestacados {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .servicioItem {
+      max-width: 100%;
+    }
+  }

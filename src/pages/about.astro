@@ -1,0 +1,87 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import SliderAbout from "../components/Slider.astro";
+import Detalles from "../components/Detalles.astro";
+import Servicios from "../components/Servicios.astro";
+import AreasCoverage from "../components/AreasCoverage.astro";
+import Contacto from "../components/Contacto.astro";
+import FAQ from "../components/FAQ.astro";
+import SliderFooter from "../components/SliderFooter.astro";
+import Footer from "../components/Footer.astro";
+import Copyright from "../components/Copyright.astro";
+import TopBar from "../components/TopBar.astro";
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
+---
+
+<!--Rutas y vistas del sitio --><!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina de About</title>
+  </head>
+  <body>
+    <TopBar />
+    <Navbar />
+    <section id="sliderAbout">
+      <SliderAbout />
+    </section>
+    <section>
+      <div class="aboutSectionDetalles">
+        <div class="conteinerImagen">
+          <img src="/src/img/Remolque.jpg" alt="ImagenDeRemolque" />
+        </div>
+        <div class="containerTexto">
+          <div class="tituloTexto">
+            <h1>SunnyBank Towing</h1>
+          </div>
+          <div class="detallesTexto">
+            <p>
+              Servicio de grúa las 24 horas en Brisbane. Respuesta rápida y
+              profesional cuando más lo necesitas.
+            </p>
+            <div class="serviciosDestacados">
+              <div class="servicioItem">
+                <div class="servicioIcono">
+                  <img
+                    src="/src/img/tow-truck-1.png"
+                    alt="Respuesta Rápida"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="servicioTitulo">
+                  <h4>Respuesta Rápida</h4>
+                </div>
+              </div>
+
+              <div class="servicioItem">
+                <div class="servicioIcono">
+                  <img
+                    src="/src/img/semi-truck.png"
+                    alt="Recuperación Encubierta"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="servicioTitulo">
+                  <h4>Recuperación Encubierta</h4>
+                </div>
+              </div>
+            </div>
+            <p>
+              Remolque de vehículos livianos y pesados, asistencia en carretera
+              y transporte seguro a cualquier destino.
+            </p>
+          </div>
+          <div class="buttonContacto">
+            <button name="Contact" type="button" class="btnContact">
+              Contáctanos Ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
