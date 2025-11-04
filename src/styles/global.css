@@ -108,3 +108,312 @@
       max-width: 100%;
     }
   }
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f8f9fa;
+        }
+
+        /* Section Container */
+        .porQueElegirnos {
+            padding: 5rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .aboutSectionNosotros {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Content Grid */
+        .contenidoGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .textContent {
+            order: 1;
+        }
+
+        .containerImagenNosotros {
+            order: 2;
+        }
+
+        .textContent {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Heading Section */
+        .seccionTitulo {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: #2d3561;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            letter-spacing: -0.5px;
+        }
+
+        /* Feature Blocks */
+        .featureBlock {
+            margin-bottom: 1.5rem;
+        }
+
+        .featureTitle {
+            color: #6b7280;
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .featureText {
+            color: #6b7280;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .mapLink {
+            color: #e91e63;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mapLink:hover {
+            color: #c2185b;
+            text-decoration: underline;
+        }
+
+        /* Call Booking Section - Estilo de la Referencia */
+        .containerBooking {
+            background: transparent;
+            padding: 0;
+            margin-top: 2rem;
+        }
+
+        .nameBoxCall {
+            color: #2d3561;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .phoneWrapper {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        /* Phone Icon - Estilo Exacto de la Referencia */
+        .iconoCall {
+            width: 70px;
+            height: 70px;
+            background: #2d3561;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .iconoCall:hover {
+            background: #3d4571;
+            transform: scale(1.05);
+        }
+
+        .iconoCall svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        /* Phone Number - Estilo Exacto de la Referencia */
+        .phoneNumber {
+            color: white;
+            background: #2d3561;
+            font-size: 1.75rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .phoneNumber:hover {
+            background: #3d4571;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(45, 53, 97, 0.3);
+        }
+
+        /* Contact Button */
+        .buttonContacto {
+            margin-top: 1.5rem;
+        }
+
+        .btnContact {
+            background: #e91e63;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btnContact:hover {
+            background: #c2185b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233, 30, 99, 0.3);
+        }
+
+        .btnContact:active {
+            transform: translateY(0);
+        }
+
+        /* Image Section - Mantener Imagen Completa Visible */
+        .containerImagenNosotros {
+            position: relative;
+            height: 100%;
+            min-height: 600px;
+        }
+
+        .boxImagen {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .towTruckImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .boxImagen:hover .towTruckImage {
+            transform: scale(1.05);
+        }
+
+        /* Decorative Dot - Como en la Referencia */
+        .decorativeDot {
+            width: 12px;
+            height: 12px;
+            background: #e91e63;
+            border-radius: 50%;
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .contenidoGrid {
+                gap: 3rem;
+            }
+
+            .seccionTitulo {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .porQueElegirnos {
+                padding: 3rem 1.5rem;
+            }
+
+            .contenidoGrid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .phoneWrapper {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+
+            .phoneNumber {
+                font-size: 1.5rem;
+                padding: 0.875rem 1.75rem;
+            }
+
+            .containerImagenNosotros {
+                min-height: 450px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .porQueElegirnos {
+                padding: 2rem 1rem;
+            }
+
+            .seccionTitulo {
+                font-size: 1.75rem;
+            }
+
+            .nameBoxCall {
+                font-size: 1.5rem;
+            }
+
+            .phoneWrapper {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .iconoCall {
+                width: 60px;
+                height: 60px;
+            }
+
+            .phoneNumber {
+                font-size: 1.25rem;
+                padding: 0.75rem 1.5rem;
+            }
+
+            .btnContact {
+                width: 100%;
+                font-size: 1rem;
+                padding: 0.875rem 2rem;
+            }
+
+            .containerImagenNosotros {
+                min-height: 350px;
+            }
+
+            .featureText {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Focus Styles */
+        .phoneNumber:focus,
+        .btnContact:focus,
+        .mapLink:focus {
+            outline: 3px solid #2d3561;
+            outline-offset: 4px;
+        }
+
+  
