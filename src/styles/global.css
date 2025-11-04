@@ -1,19 +1,6 @@
 @import "tailwindcss";
 /*Archivos de estilo (Tailwind)*/
-.btnContact {
-  background-color:#0D47A1; /* Color De Boton En Hover */
-  color: white;              /* texto blanco */
-  border: none;              /* sin borde */
-  padding: 10px 20px;        /* espaciado interno */
-  border-radius: 5px;        /* bordes redondeados */
-  cursor: pointer;           /* cambia el cursor al pasar el mouse */
-  font-size: 16px;
-  transition: background 0.3s;
-}
 
-.btnContact:hover {
-  background-color: #1565C0; /* Azul más oscuro al pasar el mouse */
-}
 
   .aboutSectionDetalles {
     display: flex;
@@ -211,11 +198,7 @@
             gap: 1rem;
         }
 
-        .phoneWrapper {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
+
 
         /* Phone Icon - Estilo Exacto de la Referencia */
         .iconoCall {
@@ -259,34 +242,8 @@
             box-shadow: 0 4px 15px rgba(45, 53, 97, 0.3);
         }
 
-        /* Contact Button */
-        .buttonContacto {
-            margin-top: 1.5rem;
-        }
 
-        .btnContact {
-            background: #e91e63;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 600;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .btnContact:hover {
-            background: #c2185b;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(233, 30, 99, 0.3);
-        }
-
-        .btnContact:active {
-            transform: translateY(0);
-        }
+       
 
         /* Image Section - Mantener Imagen Completa Visible */
         .containerImagenNosotros {
@@ -393,11 +350,6 @@
                 padding: 0.75rem 1.5rem;
             }
 
-            .btnContact {
-                width: 100%;
-                font-size: 1rem;
-                padding: 0.875rem 2rem;
-            }
 
             .containerImagenNosotros {
                 min-height: 350px;
@@ -410,10 +362,41 @@
 
         /* Focus Styles */
         .phoneNumber:focus,
-        .btnContact:focus,
+
         .mapLink:focus {
             outline: 3px solid #2d3561;
             outline-offset: 4px;
         }
 
+/*estilos seccion por que elegirnos*/
+.aboutSectionNosotros {
+  display:flex; /*Alinear div en una sola seccion*/
+  justify-content: space-around; /*Nos ayuda a separar las secciones, distribuye el espacio*/
+  gap: 15px; /*Espacio entre los divs*/
+}
+.tituloNosotros{
+width: 50%;
+padding: 20px;
+
+
+}
+.containerBooking{
+width: 50%;
+padding: 20px;
+
   
+}
+        .phoneWrapper {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            
+
+        }
+.inconoCall{
+  width: 65px;
+  height: 65px;
+  background: #0D47A1 !important;
+  border-radius: 5px;
+
+}
